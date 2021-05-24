@@ -221,9 +221,9 @@ public class Juego extends InterfaceJuego
 		
 		//COLISION SAKURA - NINJA
 		for(Ninja ninja: ninjas) {
-		if(ninja!=null && this.hayColision(sakura,ninja) )
-			this.termino=true;
-			}
+			if(ninja!=null && this.hayColision(sakura,ninja) )
+				this.termino=true;
+				}
 		
 		if (moneda != null) {
 			if(obtieneMoneda(sakura, moneda)){
@@ -247,14 +247,14 @@ public class Juego extends InterfaceJuego
         }
         
         //1400
-        if(tiempoMonedas > 300) {
+        if(tiempoMonedas > 600) {
         	establecerMoneda();
         }
         // Marcadores
         marcador(entorno);
         this.tiempoMonedas++;
         
-        if(puntaje>=20) {
+        if(puntaje>=80) {
         	this.ganaste=true;
         	this.termino=true;
         }

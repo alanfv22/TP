@@ -23,16 +23,16 @@ public class Sakura {
 	}
 	
 	public void moverDerecha(){
-		this.x+=5;
+		this.x++;
 	}
 	public void moverIzquierda(){
-		this.x-=5;
+		this.x--;
 	}
 	public void moverArriba(){
-		this.y-=5;
+		this.y--;
 	}
 	public void moverAbajo(){
-		this.y+=5;
+		this.y++;
 	}
 	
 	public void dibujar(Entorno entorno) {

@@ -16,16 +16,18 @@ public class Casa {
 	private boolean yaFueSeleccionada;
 	private boolean pasoSakura;
 	private Image imagen;
+	private Image inquilino;
 	
 	public Casa(int x, int y,String tipoCasa) {
 		this.x = x;
 		this.y = y;
-		this.ancho = 25;
-		this.alto = 25;
-		this.grado =90;
+		this.ancho = 60;
+		this.alto = 60;
+		this.grado =0;
 		this.yaFueSeleccionada=false;
 		this.pasoSakura=false;
 		this.imagen = new ImageIcon(getClass().getResource(tipoCasa)).getImage();
+		this.inquilino = new ImageIcon(getClass().getResource(dameInquilino())).getImage();
 	}
 	
 	public void dibujar(Entorno entorno) {
@@ -34,8 +36,8 @@ public class Casa {
 			entorno.dibujarImagen(this.imagen, this.x, this.y, 0);
 	}
 		if(this.isYaFueSeleccionada() && !this.isPasoSakura()) {
-			//entorno.dibujarTriangulo(x, y, alto, ancho, grado, Color.cyan);
 			entorno.dibujarImagen(this.imagen, this.x, this.y, 0);
+			entorno.dibujarImagen(this.inquilino, this.x, this.y, 0);
 		}
 		if(this.isYaFueSeleccionada() && this.isPasoSakura()) {
 			//entorno.dibujarTriangulo(x, y, alto, ancho, grado, Color.MAGENTA);
@@ -91,6 +93,18 @@ public class Casa {
         }
         casas[i].setYaFueSeleccionada(true);
         return casas[i];
+    }
+    
+    private String dameInquilino() {
+    	int i = Util.random(0, 2);
+    	if(i == 0) {
+    		return "recibe1.png";
+    	}
+    	else if(i == 1) {
+    		return "recibe2.png";
+    	}else {
+    		return "recibe3.png";
+    	}
     }
     
 	public int getX() {
