@@ -228,7 +228,7 @@ public class Juego extends InterfaceJuego
 		if (moneda != null) {
 			if(obtieneMoneda(sakura, moneda)){
 				this.moneda = null;
-				this.puntaje += 15;
+				this.puntaje += 10;
 			}
 		}
 		
