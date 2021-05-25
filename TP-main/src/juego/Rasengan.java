@@ -12,7 +12,6 @@ public class Rasengan {
 	private int y;
 	private int alto;
 	private int ancho;
-	private int direccion;
 	private Image imagen;
 
 	
@@ -68,15 +67,6 @@ public void moverAbajo(){
 	public void setAlto(int alto) {
 		this.alto = alto;
 	}
-	
-	public int getDireccion() {
-		return direccion;
-	}
-	
-	public void setDireccion(int direccion) {
-		this.direccion = direccion;
-	}
-	
 	public int getAncho() {
 		return ancho;
 	}

@@ -214,7 +214,7 @@ public class Juego extends InterfaceJuego
 					ninjas[i].moverAbajoFurious();
 					if(ninjas[i].getY() > 600 - 25/2) {
 						ninjas[i].setY(25/2);
-				}
+					}
 				}
 			}
 		}
