@@ -30,13 +30,13 @@ public class Ninja {
 	public static Ninja[] obtenerNinjas () {
 		Ninja [] ninjas= new Ninja [7];
 	  
-		ninjas[0] = new Ninja(0,75,"Ninja1.png");//Movimiento Izq-Der
-		ninjas[2]= new Ninja(0,225,"Ninja2.png");//Movimiento Izq-Der
-		ninjas[4] = new Ninja(0,375,"Ninja3.png");//Movimiento Izq-Der
-		ninjas[6] = new Ninja(0, 525,"Ninja1.png"); // Movimiento Izq- Der
-		ninjas[1] = new Ninja(200,0,"Ninja2.png");//Movimiento Arr-Aba
-		ninjas[3] = new Ninja(400,0,"Ninja3.png");//Movimiento Arr-Aba
-		ninjas[5] = new Ninja(600,0,"Ninja1.png");//Movimiento Arr-Aba
+		ninjas[0] = new Ninja(0,75,"static/Ninja1.png");//Movimiento Izq-Der
+		ninjas[2]= new Ninja(0,225,"static/Ninja2.png");//Movimiento Izq-Der
+		ninjas[4] = new Ninja(0,375,"static/Ninja3.png");//Movimiento Izq-Der
+		ninjas[6] = new Ninja(0, 525,"static/Ninja1.png"); // Movimiento Izq- Der
+		ninjas[1] = new Ninja(200,0,"static/Ninja2.png");//Movimiento Arr-Aba
+		ninjas[3] = new Ninja(400,0,"static/Ninja3.png");//Movimiento Arr-Aba
+		ninjas[5] = new Ninja(600,0,"static/Ninja1.png");//Movimiento Arr-Aba
 		
 	
 		return ninjas;

@@ -19,7 +19,7 @@ public class Moneda {
 		this.y = y;
 		this.diametro = 20;
 		this.color = Color.yellow;
-		this.imagen = new ImageIcon(getClass().getResource("Moneda.png")).getImage();
+		this.imagen = new ImageIcon(getClass().getResource("static/Moneda.png")).getImage();
 		
 	}
 	

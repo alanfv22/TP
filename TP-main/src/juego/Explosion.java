@@ -15,7 +15,7 @@ public class Explosion {
 	    public Explosion(int x, int y) {
 	        this.x = x;
 	        this.y = y;
-	        this.imagen = new ImageIcon(getClass().getResource("explosion1.png")).getImage();
+	        this.imagen = new ImageIcon(getClass().getResource("static/explosion1.png")).getImage();
 	        this.tiempo = 60;
 	    }
 
@@ -25,27 +25,27 @@ public class Explosion {
 
 	    public void explotando() {
 	        if(this.tiempo > 50) {
-	            this.imagen = new ImageIcon(getClass().getResource("explosion1.png")).getImage();
+	            this.imagen = new ImageIcon(getClass().getResource("static/explosion1.png")).getImage();
 	            this.tiempo--;
 	        }
 	        else if(this.tiempo > 40 && this.tiempo <= 50) {
-	            this.imagen = new ImageIcon(getClass().getResource("explosion2.png")).getImage();
+	            this.imagen = new ImageIcon(getClass().getResource("static/explosion2.png")).getImage();
 	            this.tiempo--;
 	        }
 	        else if(this.tiempo > 30 && this.tiempo <= 40) {
-	            this.imagen = new ImageIcon(getClass().getResource("explosion3.png")).getImage();
+	            this.imagen = new ImageIcon(getClass().getResource("static/explosion3.png")).getImage();
 	            this.tiempo--;
 	        }
 	        else if(this.tiempo > 20 && tiempo <= 30 ) {
-	            this.imagen = new ImageIcon(getClass().getResource("explosion4.png")).getImage();
+	            this.imagen = new ImageIcon(getClass().getResource("static/explosion4.png")).getImage();
 	            this.tiempo--;
 	        }
 	        else if(this.tiempo > 10 && this.tiempo <= 20) {
-	            this.imagen = new ImageIcon(getClass().getResource("explosion5.png")).getImage();
+	            this.imagen = new ImageIcon(getClass().getResource("static/explosion5.png")).getImage();
 	            this.tiempo--;
 	        }
 	        else if(this.tiempo > 0 && tiempo <= 10 ) {
-	            this.imagen = new ImageIcon(getClass().getResource("explosion6.png")).getImage();
+	            this.imagen = new ImageIcon(getClass().getResource("static/explosion6.png")).getImage();
 	            this.tiempo--;
 	        }
 	        else{

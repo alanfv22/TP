@@ -19,7 +19,7 @@ public class Sakura {
 		this.y= y;
 		this.ancho= ancho;
 		this.alto= alto;
-		this.imagen = new ImageIcon(getClass().getResource("Sakura.gif")).getImage();
+		this.imagen = new ImageIcon(getClass().getResource("static/Sakura.gif")).getImage();
 	}
 	
 	public void moverDerecha(){

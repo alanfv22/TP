@@ -20,7 +20,7 @@ public class Rasengan {
 		this.y = y;
 		this.alto = alto;
 		this.ancho = ancho;
-		this.imagen = new ImageIcon(getClass().getResource("Rasengan.png")).getImage();
+		this.imagen = new ImageIcon(getClass().getResource("static/Rasengan.png")).getImage();
 	}
 
 	public void dibujar(Entorno entorno) {

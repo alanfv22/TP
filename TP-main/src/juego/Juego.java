@@ -65,7 +65,7 @@ public class Juego extends InterfaceJuego
         establecerMoneda();
         this.tiempoMonedas = 0;
         
-        this.imagenFondo = new ImageIcon(getClass().getResource("Fondo.jpg")).getImage();
+        this.imagenFondo = new ImageIcon(getClass().getResource("static/Fondo.jpg")).getImage();
 		// Inicia el juego!
 		this.entorno.iniciar();
 	}
@@ -261,11 +261,11 @@ public class Juego extends InterfaceJuego
 }
 		else {
 			if(!ganaste) {
-				Image imagen= new ImageIcon(getClass().getResource("Perdiste.png")).getImage();
+				Image imagen= new ImageIcon(getClass().getResource("static/Perdiste.png")).getImage();
 				entorno.dibujarImagen(imagen,400, 300,0);
 			}
 			else {
-				Image imagen= new ImageIcon(getClass().getResource("Ganaste.png")).getImage();
+				Image imagen= new ImageIcon(getClass().getResource("static/Ganaste.png")).getImage();
 				entorno.dibujarImagen(imagen,400, 300,0);
 			}
 		}
