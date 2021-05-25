@@ -7,7 +7,7 @@ import javax.swing.ImageIcon;
 import entorno.Entorno;
 
 public class Explosion {
-	   private int x;
+	    private int x;
 	    private int y;
 	    private Image imagen;
 	    private int tiempo;

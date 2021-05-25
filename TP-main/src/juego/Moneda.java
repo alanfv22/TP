@@ -1,6 +1,5 @@
 package juego;
 
-import java.awt.Color;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -11,14 +10,12 @@ public class Moneda {
 	private int x;
 	private int y;
 	private int diametro;
-	private Color color;
 	private Image imagen;
 	
 	public Moneda(int x, int y) {
 		this.x = x;
 		this.y = y;
 		this.diametro = 20;
-		this.color = Color.yellow;
 		this.imagen = new ImageIcon(getClass().getResource("static/Moneda.png")).getImage();
 		
 	}
@@ -75,16 +72,5 @@ public class Moneda {
 
 	public void setDiametro(int diametro) {
 		this.diametro = diametro;
-	}
-
-	public Color getColor() {
-		return color;
-	}
-
-	public void setColor(Color color) {
-		this.color = color;
-	}
-	
-	
-	
+	}	
 }

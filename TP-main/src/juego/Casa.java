@@ -12,7 +12,6 @@ public class Casa {
 	private int y;
 	private int ancho;
 	private int alto;
-	private int grado;
 	private boolean yaFueSeleccionada;
 	private boolean pasoSakura;
 	private Image imagen;
@@ -23,7 +22,6 @@ public class Casa {
 		this.y = y;
 		this.ancho = 60;
 		this.alto = 60;
-		this.grado =0;
 		this.yaFueSeleccionada=false;
 		this.pasoSakura=false;
 		this.imagen = new ImageIcon(getClass().getResource(tipoCasa)).getImage();
@@ -31,16 +29,11 @@ public class Casa {
 	}
 	
 	public void dibujar(Entorno entorno) {
-		if (!this.isYaFueSeleccionada() && !this.isPasoSakura()){
-			//entorno.dibujarTriangulo(x, y, alto, ancho, grado, Color.red);	
-			entorno.dibujarImagen(this.imagen, this.x, this.y, 0);
-	}
 		if(this.isYaFueSeleccionada() && !this.isPasoSakura()) {
 			entorno.dibujarImagen(this.imagen, this.x, this.y, 0);
 			entorno.dibujarImagen(this.inquilino, this.x, this.y, 0);
 		}
-		if(this.isYaFueSeleccionada() && this.isPasoSakura()) {
-			//entorno.dibujarTriangulo(x, y, alto, ancho, grado, Color.MAGENTA);
+		else {
 			entorno.dibujarImagen(this.imagen, this.x, this.y, 0);
 		}
 	}
@@ -82,7 +75,8 @@ public class Casa {
 	    casas[31]= new Casa(750,485,"static/Casa2.png");
 	    casas[32]= new Casa(100,562,"static/Casa3.png");
 	    casas[33]= new Casa(300,561,"static/Casa1.png");
-	     return casas;
+	    
+	    return casas;
 	}
 	
     public static Casa obtenerCasaEntregarFlores(Casa[] casas){
@@ -137,14 +131,6 @@ public class Casa {
 
 	public void setAlto(int alto) {
 		this.alto = alto;
-	}
-
-	public int getGrado() {
-		return grado;
-	}
-
-	public void setGrado(int grado) {
-		this.grado = grado;
 	}
 
 	public boolean isYaFueSeleccionada() {

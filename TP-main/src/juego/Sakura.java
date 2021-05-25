@@ -1,6 +1,5 @@
 package juego;
 
-import java.awt.Color;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -14,11 +13,11 @@ public class Sakura {
 	private int alto;
 	private Image imagen;
 	
-	public Sakura(int x, int y,int ancho, int alto) {
+	public Sakura(int x, int y) {
 		this.x= x;
 		this.y= y;
-		this.ancho= ancho;
-		this.alto= alto;
+		this.ancho= 26;
+		this.alto= 26;
 		this.imagen = new ImageIcon(getClass().getResource("static/Sakura.gif")).getImage();
 	}
 	
@@ -37,12 +36,10 @@ public class Sakura {
 	
 	public void dibujar(Entorno entorno) {
 		entorno.dibujarImagen(this.imagen, this.x, this.y, 0);
-	
-		
 	}
 	
 	public  Rasengan disparar() {	
-		return new Rasengan(this.x,this.y,10, 10);	
+		return new Rasengan(this.x,this.y);	
 	}
 
 	public int getX() {

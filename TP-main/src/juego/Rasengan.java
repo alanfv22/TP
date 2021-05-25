@@ -15,11 +15,11 @@ public class Rasengan {
 	private Image imagen;
 
 	
-	public Rasengan(int x, int y, int alto, int ancho) {
+	public Rasengan(int x, int y) {
 		this.x = x;
 		this.y = y;
-		this.alto = alto;
-		this.ancho = ancho;
+		this.alto = 10;
+		this.ancho = 10;
 		this.imagen = new ImageIcon(getClass().getResource("static/Rasengan.png")).getImage();
 	}
 

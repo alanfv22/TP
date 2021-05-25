@@ -1,7 +1,6 @@
 package juego;
 
 import java.awt.Color;
-import java.awt.Font;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -41,7 +40,7 @@ public class Juego extends InterfaceJuego
 		this.ganaste=false;
 		
 		// Inicializar lo que haga falta para el juego
-		this.sakura = new Sakura (400,300,26,26);
+		this.sakura = new Sakura (400,300);
 		this.puntaje = 0;
 		this.ninjasKO = 0;
 		
@@ -63,7 +62,6 @@ public class Juego extends InterfaceJuego
         this.ultTeclaPresionada = "Up";
         
         establecerMoneda();
-        this.tiempoMonedas = 0;
         
         this.imagenFondo = new ImageIcon(getClass().getResource("static/Fondo.jpg")).getImage();
 		// Inicia el juego!
@@ -200,7 +198,7 @@ public class Juego extends InterfaceJuego
 					ninjas[i].moverDerechaFurious();
 					if(ninjas[i].getX() > 800 - 25/2) {
 						ninjas[i].setX(25/2);
-				}
+					}
 				}
 			}else {
 				if(ninjas[i] == null) {
@@ -247,14 +245,14 @@ public class Juego extends InterfaceJuego
         }
         
         //1400
-        if(tiempoMonedas > 600) {
+        if(tiempoMonedas > 500) {
         	establecerMoneda();
         }
         // Marcadores
         marcador(entorno);
         this.tiempoMonedas++;
         
-        if(puntaje>=80) {
+        if(puntaje>=90) {
         	this.ganaste=true;
         	this.termino=true;
         }
@@ -270,7 +268,6 @@ public class Juego extends InterfaceJuego
 			}
 		}
 	}
-	
 	
 	private boolean hayColision(Sakura sakura, Ninja ninja) {
 	            return !((sakura.getX() - sakura.getAncho()/2 > ninja.getX() + ninja.getAncho()/2 )||
