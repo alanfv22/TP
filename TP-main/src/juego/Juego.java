@@ -77,7 +77,7 @@ public class Juego extends InterfaceJuego
 		//Dibujo fondo de marcador
 		this.entorno.dibujarRectangulo(400, 0, 800, 40, 0, Color.black);
 		
-		// Dibujo Mapa
+		// Dibujo Calles
 		for( Calle calle : calles) {
 			calle.dibujar(entorno);
 		}
@@ -131,7 +131,7 @@ public class Juego extends InterfaceJuego
 		}}
 		
 		// ENTREGA FLORES 
-        if(entregoFloresSakura(sakura, casaSeleccionada)) {
+        if(hayColision(sakura, casaSeleccionada)) {
         	casaSeleccionada.setPasoSakura(true);
         	this.casaSeleccionada=Casa.obtenerCasaEntregarFlores(casas);
         }
@@ -163,7 +163,7 @@ public class Juego extends InterfaceJuego
 			else {
 				for (int i = 0; i < ninjas.length ; i++) {	
 					if(ninjas[i] != null && rasengan != null) {	
-						if(this.hayColisionRasengan(ninjas[i], rasengan)) {
+						if(hayColision(ninjas[i], rasengan)) {
 							this.explosion=new Explosion (rasengan.getX(),rasengan.getY());
 				        	this.ninjas[i] = null;
 				        	this.rasengan = null;
@@ -224,7 +224,7 @@ public class Juego extends InterfaceJuego
 				}
 		
 		if (moneda != null) {
-			if(obtieneMoneda(sakura, moneda)){
+			if(hayColision(sakura, moneda)){
 				this.moneda = null;
 				this.puntaje += 10;
 			}
@@ -276,7 +276,7 @@ public class Juego extends InterfaceJuego
 	            (sakura.getY() + sakura.getAlto()/2 < ninja.getY() - ninja.getAlto()/2));         
 	        }
 	
-	private boolean entregoFloresSakura(Sakura sakura, Casa casa) {
+	private boolean hayColision(Sakura sakura, Casa casa) {
 	            if (!((sakura.getX() - sakura.getAncho()> casa.getX() + casa.getAncho()/4)||
 	            (sakura.getY() - sakura.getAlto() > casa.getY() + casa.getAlto()/4) ||
 	             (sakura.getX() + sakura.getAncho() < casa.getX() - casa.getAncho()/4)||
@@ -287,14 +287,14 @@ public class Juego extends InterfaceJuego
 	            return false;   
 	        }
 	
-	private boolean hayColisionRasengan(Ninja ninja,Rasengan rasengan) {
+	private boolean hayColision(Ninja ninja,Rasengan rasengan) {
 		return !((rasengan.getX() - rasengan.getAncho()/2 > ninja.getX() + ninja.getAncho()/2 )||
 	            (rasengan.getY() - rasengan.getAlto()/2 > ninja.getY() + ninja.getAlto()/2) ||
 	             (rasengan.getX() + rasengan.getAncho()/2 < ninja.getX() - ninja.getAncho()/2 )||
 	            (rasengan.getY() + rasengan.getAlto()/2 < ninja.getY() - ninja.getAlto()/2));         
 	        }
 	
-	private boolean obtieneMoneda(Sakura sakura, Moneda moneda) {
+	private boolean hayColision(Sakura sakura, Moneda moneda) {
         return !((sakura.getX() - sakura.getAncho()/2 > moneda.getX() + moneda.getDiametro()/2 )||
         (sakura.getY() - sakura.getAlto()/2 > moneda.getY() + moneda.getDiametro()/2) ||
          (sakura.getX() + sakura.getAncho()/2 < moneda.getX() - moneda.getDiametro()/2 )||
